@@ -168,7 +168,6 @@ proc ::tincr::write_xdlrc { args } {
             puts $outfile "(primitive_defs [dict size $sorted_site_types]"
             
             # Append primitive definitions
-            #TODO: List the primitive definitions in alphabetical order in the XDLRC by sorting the dictionary by key value
 	    dict for {site_type instance} $sorted_site_types {
                 set prim_def_file [file join [::tincr::cache::directory_path dict.site_type.src_bel.src_pin.snk_bel.snk_pins] "$site_type.def"]
                 
